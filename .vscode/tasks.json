@@ -1,0 +1,116 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: compile executable",
+            "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "-I",
+                "${workspaceFolder}",
+                "-I",
+                "C:/msys64/ucrt64/include",
+                "-L",
+                "C:/msys64/ucrt64/lib",
+                "${workspaceFolder}\\main.c++",
+                "${workspaceFolder}\\scripts\\characters\\player.c++",
+                "${workspaceFolder}\\scripts\\characters\\ogro.c++",
+                "${workspaceFolder}\\scripts\\characters\\rat.c++",
+                "${workspaceFolder}\\scripts\\armors\\plate_armor.c++",
+                "${workspaceFolder}\\scripts\\wearpons\\iron_hammer.c++",
+                "${workspaceFolder}\\scripts\\wearpons\\iron_shield.c++",
+                "${workspaceFolder}\\scripts\\maps\\caves_of_chaos.c++",
+                "${workspaceFolder}\\scripts\\backgrounds\\floor.c++",
+                "${workspaceFolder}\\scripts\\backgrounds\\wall.c++",
+                "${workspaceFolder}\\scripts\\objects\\door.c++",
+                "${workspaceFolder}\\scripts\\objects\\table_empty.c++",
+                "${workspaceFolder}\\scripts\\objects\\table_paper.c++",
+                "${workspaceFolder}\\scripts\\objects\\chair.c++",
+                "${workspaceFolder}\\scripts\\objects\\boockcase.c++",
+                "${workspaceFolder}\\scripts\\itens\\potion_hp_minor.c++",
+                "${workspaceFolder}\\scripts\\hud\\camera.c++",
+                "${workspaceFolder}\\scripts\\hud\\bag.c++",
+                "${workspaceFolder}\\scripts\\hud\\bgm_manager.c++",
+                "${workspaceFolder}\\scripts\\screens\\screen_game.c++",
+                "${workspaceFolder}\\scripts\\screens\\screen_battle.c++",
+                "${workspaceFolder}\\scripts\\screens\\screen_gameover.c++",
+                "${workspaceFolder}\\scripts\\skills\\paladino_devotion.c++",
+                "${workspaceFolder}\\scripts\\skills\\barbarian_berserker.c++",
+                "${workspaceFolder}\\scripts\\screens\\screen_load.c++",
+                "${workspaceFolder}\\scripts\\screens\\screen_create_character.c++",
+                "${workspaceFolder}\\scripts\\screens\\screen_intro.c++",
+                "${workspaceFolder}\\scripts\\dice\\dice_1d20.c++",
+                "${workspaceFolder}\\scripts\\dice\\dice_1d4.c++",
+                "${workspaceFolder}\\scripts\\dice\\dice_1d6.c++",
+                "${workspaceFolder}\\scripts\\dice\\dice_1d8.c++",
+                "${workspaceFolder}\\scripts\\dice\\dice_1d10.c++",
+                "${workspaceFolder}\\scripts\\dice\\dice_1d12.c++",
+                "-o",
+                "${workspaceFolder}\\builds\\Moons of Krewbull - Build 1\\Moons of Krewbull.runtime.exe",
+                "-lmingw32",
+                "-lSDL2main",
+                "-lSDL2",
+                "-lSDL2_image",
+                "-lSDL2_mixer",
+                "-lSDL2_ttf"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Compila o executavel para a pasta de build."
+        },
+        {
+            "type": "process",
+            "label": "Package Windows executable",
+            "command": "powershell.exe",
+            "args": [
+                "-NoProfile",
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "${workspaceFolder}\\dev\\package_windows.ps1"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "C/C++: g++.exe build active file",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "C/C++: compile executable",
+                "Package Windows executable"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++ arquivo de build ativo",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Tarefa gerada pelo Depurador."
+        }
+    ]
+}

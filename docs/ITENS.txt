@@ -1,0 +1,42 @@
+MEDALHÃO DE ASKATOR
+"Ao equipar este item, voce terá o HP total aumentado em +25%"
+
+requerimentos de uso:
+INTELECTO +22
+========================================================================================
+ESPADA DE BLANECHAIN
+"Esta espada concede ao portador dela um aumento em +12 de Força"
+
+requerimentos de uso:
+FORÇA +26
+========================================================================================
+ESCUDO DE KREKADDON
+"Ao utilizar este artefato místico, o portador dele ganha um aumento de +10 CA"
+
+requerimentos:
+FORÇA +22
+========================================================================================
+JOIA DA ALMA CORROMPIDA
+"Ao carregar este artefato místico em sua carga total de 10, quando voce morrer
+poderá utilizar a carga como energia para lhe reviver sem perdas ou custos de vida"
+
+requerimentos de uso:
+INTELECTO +30
+========================================================================================
+PEDRA DA VIDA
+"Ao equipar este item, quando voce morrer em um combate, voce tem a chance de reviver
+porém com apenas 85% de seu HP total, este item se desfaz após o uso, a cada novo uso
+deste item, voce reviverá com -15% de sua vida total sempre, reduzindo no maximo 40% 
+de seu HP total"
+
+requerimentos de uso:
+DESTREZA +8
+========================================================================================
+TOTEN DA VIDA
+"Ao equipar este item, quando voce morrer em um combate, voce tem a chance de ir até o 
+reino dos mortos e barganhar com FRYGGDUH, o deus da ganancia, e terá que jogar um jogo
+com ele, caso voce vença, ele te dará a vida de volta, caso voce perca, voce nunca 
+mais poderá reviver"
+
+requerimentos de uso:
+nenhum
